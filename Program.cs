@@ -1,9 +1,6 @@
 ﻿
 class Program
 {
-
-    private static int TotalDeletedFiles {get; set;} = 0;
-
     public static string[] GetDirectories(string path)
     {
         return Directory.GetDirectories(path);
@@ -14,15 +11,16 @@ class Program
         return Directory.GetFiles(path);
     }
 
-    public static void DeleteFiles(string path, string fileExtention)
+    public static int DeleteFiles(string path, string fileExtention)
     {
         Directory.SetCurrentDirectory(path);
         string[] dirs = GetDirectories(path);
         string[] files = GetFiles(path);
+        int totalDeletedFiles = 0;
 
         foreach (string subPath in dirs)
         {
-            DeleteFiles(subPath, fileExtention);
+            totalDeletedFiles += DeleteFiles(subPath, fileExtention);
         }
 
         foreach (string subPath in files)
@@ -31,9 +29,11 @@ class Program
             {
                 File.Delete(subPath);
                 Console.WriteLine("Deleted : " + Path.GetFileName(subPath));
-                TotalDeletedFiles += 1;
+                totalDeletedFiles += 1;
             }
         }
+
+        return totalDeletedFiles;
     }
 
     public static string? ReadLine(string prompt)
@@ -46,12 +46,13 @@ class Program
     {
         string? path = ReadLine("Enter path > ");
         string? fileExtentionToDelete = ReadLine("Enter extention to exterminate > ");
+        int totalDeletedFiles = 0;
 
         if ((fileExtentionToDelete != null) && (path != null))
         {
-            DeleteFiles(path, fileExtentionToDelete);
+            totalDeletedFiles = DeleteFiles(path, fileExtentionToDelete);
         }
 
-        Console.WriteLine("Deleted " + TotalDeletedFiles + "files.");
+        Console.WriteLine("Deleted " + totalDeletedFiles + " files.");
     }
 }
