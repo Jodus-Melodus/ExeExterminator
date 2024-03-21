@@ -1,0 +1,14 @@
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\bin\Debug\net8.0\ExeExterminator.exe
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\bin\Debug\net8.0\ExeExterminator.deps.json
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\bin\Debug\net8.0\ExeExterminator.runtimeconfig.json
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\bin\Debug\net8.0\ExeExterminator.dll
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\bin\Debug\net8.0\ExeExterminator.pdb
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.AssemblyInfoInputs.cache
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.AssemblyInfo.cs
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.csproj.CoreCompileInputs.cache
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.dll
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\refint\ExeExterminator.dll
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.pdb
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.genruntimeconfig.cache
+C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ref\ExeExterminator.dll
