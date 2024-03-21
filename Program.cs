@@ -11,29 +11,34 @@ class Program
         return Directory.GetFiles(path);
     }
 
-    public static int DeleteFiles(string path, string fileExtention)
+    public static (int, long) DeleteFiles(string path, string fileExtention)
     {
         Directory.SetCurrentDirectory(path);
         string[] dirs = GetDirectories(path);
         string[] files = GetFiles(path);
         int totalDeletedFiles = 0;
+        long totalSpaceCleared = 0;
 
         foreach (string subPath in dirs)
         {
-            totalDeletedFiles += DeleteFiles(subPath, fileExtention);
+            (int totalFiles, long totalSpace) = DeleteFiles(subPath, fileExtention);
+            totalDeletedFiles += totalFiles;
+            totalSpaceCleared += totalSpace;
         }
 
         foreach (string subPath in files)
         {
             if (subPath.Contains(fileExtention))
             {
-                File.Delete(subPath);
                 Console.WriteLine("Deleted : " + Path.GetFileName(subPath));
                 totalDeletedFiles += 1;
+                FileInfo fileInfo = new(subPath);
+                totalSpaceCleared += fileInfo.Length;
+                File.Delete(subPath);
             }
         }
 
-        return totalDeletedFiles;
+        return (totalDeletedFiles, totalSpaceCleared);
     }
 
     public static string? ReadLine(string prompt)
@@ -46,13 +51,11 @@ class Program
     {
         string? path = ReadLine("Enter path > ");
         string? fileExtentionToDelete = ReadLine("Enter extention to exterminate > ");
-        int totalDeletedFiles = 0;
 
         if ((fileExtentionToDelete != null) && (path != null))
         {
-            totalDeletedFiles = DeleteFiles(path, fileExtentionToDelete);
+            (int totalDeletedFiles, long totalSpaceCleared) = DeleteFiles(path, fileExtentionToDelete);
+            Console.WriteLine($"Deleted {totalDeletedFiles} files. ({totalSpaceCleared / 1024.0} KB)");
         }
-
-        Console.WriteLine("Deleted " + totalDeletedFiles + " files.");
     }
 }

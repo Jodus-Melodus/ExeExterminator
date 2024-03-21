@@ -12,3 +12,4 @@ C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\
 C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.pdb
 C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.genruntimeconfig.cache
 C:\Users\Philip Gricius\desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ref\ExeExterminator.dll
+C:\Users\Philip Gricius\Desktop\Programming\c#\ExeExterminator\obj\Debug\net8.0\ExeExterminator.sourcelink.json
