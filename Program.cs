@@ -49,13 +49,16 @@ class Program
 
     public static void Main()
     {
-        string? path = ReadLine("Enter path > ");
-        string? fileExtentionToDelete = ReadLine("Enter extention to exterminate > ");
-
-        if ((fileExtentionToDelete != null) && (path != null))
+        while (true)
         {
-            (int totalDeletedFiles, long totalSpaceCleared) = DeleteFiles(path, fileExtentionToDelete);
-            Console.WriteLine($"Deleted {totalDeletedFiles} files. ({totalSpaceCleared / 1024.0} KB)");
+            string? path = ReadLine("Enter path > ");
+            string? fileExtentionToDelete = ReadLine("Enter extention to exterminate > ");
+
+            if ((fileExtentionToDelete != null) && (path != null))
+            {
+                (int totalDeletedFiles, long totalSpaceCleared) = DeleteFiles(path, fileExtentionToDelete);
+                Console.WriteLine($"Deleted {totalDeletedFiles} files. ({totalSpaceCleared / 1024.0} KB)");
+            }
         }
     }
 }
