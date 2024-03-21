@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExeExterminator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b92a9acf7f0b53ac6d4329175bacac5a88c0ec2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d442a264948eb33a07b103defc0135b650654d11")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExeExterminator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExeExterminator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
